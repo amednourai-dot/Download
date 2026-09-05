@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6c63ff">
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav">
+            <div class="logo">
+                <div class="logo-icon">▶</div>
+                <span>Video Downloader</span>
+            </div>
+
+            <button id="themeBtn" class="theme-btn" aria-label="تغيير الوضع">
+                ☀️
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+
+                <div class="badge">⚡ سريع وسهل الاستخدام</div>
+
+                <h1>
+                    حمّل الفيديوهات <span>بسهولة</span>
+                </h1>
+
+                <p>
+                    الصق رابط الفيديو واختر الجودة المناسبة ثم ابدأ العملية.
+                </p>
+
+                <div class="download-box">
+
+                    <div class="input-group">
+                        <input
+                            type="url"
+                            id="videoUrl"
+                            placeholder="الصق رابط الفيديو هنا..."
+                            autocomplete="off"
+                        >
+
+                        <button id="pasteBtn" class="paste-btn">
+                            لصق
+                        </button>
+                    </div>
+
+                    <button id="analyzeBtn" class="analyze-btn">
+                        <span>🔍</span>
+                        تحليل الرابط
+                    </button>
+
+                    <p id="message" class="message"></p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="result-section hidden" id="resultSection">
+
+            <div class="container">
+
+                <div class="video-card">
+
+                    <div class="thumbnail">
+                        <div class="play-circle">▶</div>
+                        <span class="duration">12:45</span>
+                    </div>
+
+                    <div class="video-info">
+
+                        <div class="video-title">
+                            <h2 id="videoTitle">عنوان الفيديو التجريبي</h2>
+                            <p id="videoSource">Video Platform</p>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="options">
+
+                            <div class="option-box">
+
+                                <label>🎬 صيغة الملف</label>
+
+                                <div class="select-wrapper">
+                                    <select id="formatSelect">
+                                        <option value="mp4">MP4 - فيديو</option>
+                                        <option value="mp3">MP3 - صوت</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="option-box">
+
+                                <label>📺 جودة الفيديو</label>
+
+                                <div class="select-wrapper">
+                                    <select id="qualitySelect">
+                                        <option>1080p Full HD</option>
+                                        <option>720p HD</option>
+                                        <option>480p</option>
+                                        <option>360p</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <button id="downloadBtn" class="download-btn">
+                            <span>⬇️</span>
+                            تنزيل
+                        </button>
+
+                        <p class="demo-note">
+                            هذه واجهة تجريبية فقط ولا يتم تنزيل أي ملفات فعليًا.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="features">
+
+            <div class="container">
+
+                <h2>لماذا تستخدم موقعنا؟</h2>
+
+                <div class="features-grid">
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>سريع</h3>
+                        <p>واجهة سريعة وسهلة الاستخدام.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>متجاوب</h3>
+                        <p>يعمل بشكل ممتاز على جميع الشاشات.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎬</div>
+                        <h3>جودات متعددة</h3>
+                        <p>اختر الجودة والصيغة المناسبة لك.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Video Downloader — واجهة تجريبية</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
